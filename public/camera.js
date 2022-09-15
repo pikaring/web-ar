@@ -1,4 +1,4 @@
-let useFront = false // フロントをつかっているかどうか 
+let useFront = true // フロントをつかっているかどうか （もとは falseだった）
 let tmpStream = null
 
 var video = null
