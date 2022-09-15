@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setImage () {
-    const width = 310
-    const height = 345
+    const width = 772
+    const height = 786
     ctx.drawImage(chara, 0, 0, width, height, -30, window.innerHeight - height, width, height)
   }
 
@@ -94,13 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const chara = new Image()
   if (type == 2) {
-    chara.src = './images/02.png'
+    chara.src = './images/a02.png'
   } else if (type == 3) {
-    chara.src = './images/logo_black.png'
+    chara.src = './images/a03.png'
   } else if (type == 4) {
-    chara.src = './images/logo_white.png'
+    chara.src = './images/a04.png'
+  } else if (type == 5) {
+    chara.src = './images/a05.png'
   } else {
-    chara.src = './images/01.png'
+    chara.src = './images/a01.png'
   }
   chara.onload = () => {
     setImage()
