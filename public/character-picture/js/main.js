@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function setImage () {
     const width = 772
     const height = 786
-    ctx.drawImage(chara, 0, 0, width, height, 0, window.innerHeight - height, width/2, height/2)
+    ctx.drawImage(chara, 0, 0, width, height, 0, window.innerHeight - height, width/4, height/4)
   }
 
   function shoot () {
