@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const img = document.querySelector('#img')
   const ctx = canvas.getContext('2d')
 
-  // 1 = しんちゃん, 2 = どらえもん, logo = ヒプ
+  // 1 = 土偶, 2 = 幕末, logo = ヒプ
   let type = 1
   if (location.href.indexOf('chara=2') >= 0) {
     type = 2
