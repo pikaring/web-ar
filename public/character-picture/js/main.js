@@ -105,13 +105,4 @@ document.addEventListener('DOMContentLoaded', () => {
   chara.onload = () => {
     setImage()
   }
-
-  if (type === 2) {
-    // どらえもんの時は音が出るので注意文言を表示
-    const p = document.createElement('p')
-    p.textContent = '※ 写真を取る時に音が鳴ります'
-    p.classList.add('notice');
-    document.body.appendChild(p);
-    document.body.classList.add('draemon');
-  }
 })
