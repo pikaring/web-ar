@@ -1,26 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  var tettereee = new AudioPlayer('sound/tettereee.mp3')
-
-  /**
-   * Audioプレイヤークラス
-   */
-  function AudioPlayer (sound) {
-      this.audio = new Audio(sound)
-      this.audio.load()
-  }
-  AudioPlayer.prototype.play = function () {
-      this.audio.pause()
-      this.audio.currentTime = 0
-      this.audio.play()
-  }
-  AudioPlayer.prototype.loopPlay = function () {
-      var _this = this
-      this.play()
-      this.audio.addEventListener('ended', function () {
-          _this.audio.play()
-      })
-  }
-
   const canvas = document.querySelector('#canvas')
   const video = document.querySelector('#video')
   const shootButton = document.querySelector('#shoot')
@@ -52,6 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 772
     const height = 786
     ctx.drawImage(chara, 0, 0, width, height, 0, window.innerHeight - height/2, width/2, height/2)
+  }
+
+  function setLogo () {
+    const width = 300
+    const height = 348
+    ctx.drawImage(chara, window.innerWidh - width , 0 , width, height, 0, 0 , width , height)
   }
 
   function shoot () {
@@ -95,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setSize()
 
   const chara = new Image()
+  const logo = new Image()
   if (type == 2) {
     chara.src = './images/a02.png'
   } else if (type == 3) {
@@ -106,7 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     chara.src = './images/a01.png'
   }
+  logo.src = './images/a02.png'
   chara.onload = () => {
     setImage()
+    setLogo()
   }
 })
