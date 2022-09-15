@@ -28,14 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const img = document.querySelector('#img')
   const ctx = canvas.getContext('2d')
 
-  // 1 = 土偶, 2 = 幕末, logo = ヒプ
+  // 1 = 石川啄木, 2 = ペリー, 3=土方歳三，4=榎本武揚，5=武田
   let type = 1
   if (location.href.indexOf('chara=2') >= 0) {
     type = 2
-  } else if (location.href.indexOf('chara=logo') >= 0) {
+  } else if (location.href.indexOf('chara=3') >= 0) {
     type = 3
-  } else if (location.href.indexOf('chara=logo-white') >= 0) {
+  } else if (location.href.indexOf('chara=4') >= 0) {
     type = 4 
+  } else if (location.href.indexOf('chara=5') >= 0) {
+    type = 5 
   }
 
   function setSize () {
