@@ -1,0 +1,125 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0 auto;
+  height: 100%;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+canvas {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.camera-button {
+  width: 84px;
+  height: 84px;
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1000;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 10px 0px rgba(0,0,0,0.3);
+}
+
+.camera-button::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 50%;
+}
+
+.modal-content {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  max-width: 800px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 460px) {
+  .modal-content {
+    padding: 10px;
+  }
+  .modal-content img {
+    width: 65%;
+  }
+}
+
+.change-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: white;
+  padding: 8px 13px;
+  font-size: 12px;
+}
+
+.notice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  margin: 0;
+  padding: 2px 4px;
+}
+
+.draemon .lity-content:after {
+  box-shadow: none;
+}
+
+.draemon .modal-bg {
+  position: fixed;
+  width: 200vh;
+  height: 200vh;
+  left: calc(50% - 100vh);
+  top: calc(50% - 100vh);
+  background-color: yellow;
+  background-image: repeating-conic-gradient( transparent 0, transparent 13deg, #ffab3c 13deg, #ffab3c 16deg ),
+                    repeating-conic-gradient( transparent 0, transparent 20deg, #ffab3c 20deg, #ffab3c 23deg ),
+                    repeating-conic-gradient( transparent 0, transparent 5deg, #ffab3c 5deg, #ffab3c 8deg ),
+                    repeating-conic-gradient( transparent 0, transparent 40deg, #ffab3c 40deg, #ffab3c 44deg ),
+                    repeating-conic-gradient( transparent 0, transparent 10deg, #ffab3c 10deg, #ffab3c 13deg );
+  animation: backgroundAnimation 20s infinite linear;
+}
+
+.draemon .modal-content {
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes backgroundAnimation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
