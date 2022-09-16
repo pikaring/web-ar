@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /**
    * Audioプレイヤークラス
+   */
   function AudioPlayer (sound) {
       this.audio = new Audio(sound)
       this.audio.load()
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
           _this.audio.play()
       })
   }
-   */
+
 
   const canvas = document.querySelector('#canvas')
   const video = document.querySelector('#video')
