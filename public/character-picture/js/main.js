@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setImage () {
-    const width = 772
-    const height = 786
-    ctx.drawImage(chara, 0, 0, width, height, 0, window.innerHeight - height/2, width/2, height/2)
+    const width = 1098
+    const height = 1938
+    ctx.drawImage(chara, 0, 0, width, height, 0, 0, window.innerHeight / height * width, window.innerHeight)
   }
 
   function shoot () {
