@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /**
    * Audioプレイヤークラス
-   */
   function AudioPlayer (sound) {
       this.audio = new Audio(sound)
       this.audio.load()
@@ -20,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
           _this.audio.play()
       })
   }
+   */
 
   const canvas = document.querySelector('#canvas')
   const video = document.querySelector('#video')
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const chara = new Image()
   if (type == 2) {
-    chara.src = './images/a02.png'
+    chara.src = './images/b02.png'
   } else if (type == 3) {
     chara.src = './images/a03.png'
   } else if (type == 4) {
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (type == 5) {
     chara.src = './images/a05.png'
   } else {
-    chara.src = './images/a01.png'
+    chara.src = './images/b01.png'
   }
   chara.onload = () => {
     setImage()
